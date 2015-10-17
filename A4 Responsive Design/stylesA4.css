@@ -1,0 +1,224 @@
+/* Responsive Design Page Layout */
+
+* {
+    -webkit-transition:all .6s ease;
+    -moz-transition:all .6s ease;
+    -o-transition:all .6s ease;
+    transition:all .6s ease;
+}
+
+body {
+    margin: 0;
+    background-color: beige;
+    font-family: 'BenchNine', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+a {
+    color: deepskyblue;
+    font-weight:bolder;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#FC9;
+    text-decoration: underline;
+}
+
+h1 img {
+    width: 45%;
+    margin: left;
+}
+
+header nav {
+    padding:0;
+    margin: 2% 2%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+header nav ul li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+header nav ul li a {
+    background-color: azure;
+    padding: 3px 12px;
+}
+
+section {
+    overflow: hidden;/*Important. Set b/c this element contains floated elements (see article rules below).*/
+}
+
+section article h2 {
+    font-size: .75em;
+    font-family: 'Quando', Helvetica, Arial, sans-serif;
+    font-weight: 100;
+}
+
+section.whole article h2 {
+    margin: 0;
+}
+section.content article:before {
+    background: url("images/halftone.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    content: "";
+    opacity: .15;
+}
+
+section.content article {
+    position: relative;
+    width: 95%;
+    margin: 0% 2.5% 0 2.5%; 
+}
+
+section.content article p {
+    text-align: center;
+    padding: 5% 25%;
+}
+
+@media screen and (min-width: 961px) {
+    section.half article {
+        background: #E6E6E6;
+        color: deepskyblue;
+        width: 44%;
+        margin: 2% 3%;
+        padding: 2%;
+        float: left;        
+    }
+    
+/*
+    section.thirds article {
+        background: #E6E6E6;
+        padding: 0 0;
+        min-height: 150px;
+        width: 44%;
+        margin: 2% 2.66%;
+        float: left;
+*/
+    }
+    section.whole article{
+        background: #E6E6E6;
+        width: 95%;
+        margin: 2% 2.5%;
+        float: left; 
+        text-align: center;
+    }
+
+    section.content article {
+        width: 95%;
+        margin: 2% 2.5% 0 2.5%; 
+    }
+    
+}
+
+@media screen and (max-width: 960px) {
+    section.whole article h2 {
+        background: #E6E6E6;
+        font-size: .65em;
+        width: 45%;
+        margin: 20% 2.5%;
+        float: left; 
+        text-align: center;
+    }
+    
+    header nav {
+        position: static;
+        margin-bottom: 0;    
+    }
+    header nav ul {
+        margin: 2%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header nav {
+        position: static;
+        width: auto;
+        margin: 2% 5% 0;
+    }
+    
+/*
+    section.thirds article {
+        background: #E6E6E6;
+        padding: 0;
+        min-height: 150px;
+        width: 95%;
+        margin: 2% 2.5% 0 2.5%;
+        float: left;
+    } 
+*/
+    
+    section.whole article h2 {
+        margin: 5%;
+        font-size: .55em;
+    }   
+        
+    h1 img {
+        min-width: 350px;
+    }
+    
+    header nav ul {
+        width: 100%;
+    
+    }
+    header nav ul li {
+        width: 100%;
+        text-align: left;
+        margin-bottom: .3%;
+        margin-top: .3%;
+    }
+    
+    header nav ul li a {
+        display: block;
+        width: 100%;
+        padding-left: 6%;
+    }
+}
+
+#quote {
+    width: auto;
+    line-height: 1.5em;
+    padding: 1em;
+}
+
+footer {
+    background: #808080;
+    min-height: 100px;
+    color: #FFF;
+    margin: 1% 2.5%;
+/*    overflow: hidden;*/
+}
+
+footer ul {
+    padding: 2%;
+    margin: 0;
+}
+
+footer li {
+    list-style: none;
+    line-height: 2em;
+}
+
+section.half article {
+    background: transparent;
+    padding: 0;
+}
+
+/*
+section.border article {
+    border: 1px dashed #ccc;
+    margin: 0;
+}*/

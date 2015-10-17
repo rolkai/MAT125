@@ -1,0 +1,255 @@
+/* Responsive Design Page Layout */
+
+* {
+    -webkit-transition:all .6s ease;
+    -moz-transition:all .6s ease;
+    -o-transition:all .6s ease;
+    transition:all .6s ease;
+}
+
+html {
+    background: #c5b418 url(images/diagmonds-light.png) repeat center center fixed;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'BenchNine', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+a {
+    color: #575353;
+    font-weight: 900;
+    font-family: 'Quando', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#FFF;
+    text-decoration: underline;
+}
+
+h1 img {
+    width: 45%;
+    margin: left;
+}
+
+header nav {
+    padding:0;
+    margin: 2% 2%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+header nav ul li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+header nav ul li a {
+    background-color: transparent;
+    padding: 3px 12px;
+}
+
+section {
+    overflow: hidden;/*Important. Set b/c this element contains floated elements (see article rules below).*/
+    }
+
+section article h2 {
+    font-size: .75em;
+    font-family: 'Quando', Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    }
+
+/* Services Page */
+    section.what article h2, section.thirds article h2 {
+    font-size: 1.4em;
+    font-family: 'Quando', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    }
+
+section.thirds article {            
+    background: #E6E6E6;
+    min-height: 150px;
+    width: 95%;
+    margin: 2% 2.5% 0 2.5%;
+    float: left;
+    }
+
+section.what article h2, section.thirds h2 {
+    margin: 2%;
+    text-align: left;
+    }
+/* End Services Page */
+
+section.whole article h2 {
+    margin: 0;
+    }
+
+section.content article {
+    position: relative;
+    width: 95%;
+    margin: 0% 2.5% 0 2.5%; 
+    }   
+
+section.content article p {
+    text-align: center;
+    padding: 5% 25%;
+    }
+
+@media screen and (min-width: 961px) {
+    /* Services Page */
+    section.thirds article {
+        background: #E6E6E6;
+        border-bottom-style: groove;
+        min-height: 150px;
+        box-shadow: 10px 10px 5px #888888;
+        width: 28%;
+        margin: 2% 2.66%;
+        padding: 1%;
+        float: left;
+    }
+    
+    section.thirds article ul li {
+        list-style-type: circle;
+        list-style-position: inside;
+    }
+    
+    
+    /* End of Services Page */
+    
+    section.whole article{
+        width: 95%;
+        margin: 2% 2.5%;
+        float: left; 
+        text-align: center;
+    }
+
+    section.content article {
+        width: 95%;
+        margin: 2% 2.5% 0 2.5%; 
+    }
+    
+}
+
+@media screen and (max-width: 960px) {
+    /* Services Page */
+    section.thirds article {
+        background: #E6E6E6;
+        min-height: 150px;
+        box-shadow: 10px 10px 5px #888888;
+        width: 44%;
+        margin: 2% 2.5%;
+        padding: 2%;
+        float: left;
+    }
+
+    section.thirds article h2 {
+    margin: 2%;
+    padding: 0;
+    text-align: left;
+    }
+    section.thirds article ul li {
+        list-style-type: circle;
+        list-style-position: inside;
+    }
+        /* End of Services pages */
+
+    section.whole article h2 {
+        font-size: .65em;
+        width: 45%;
+        margin: 20% 2.5%;
+        float: left; 
+        text-align: center;
+    }
+    
+    header nav {
+        position: static;
+        margin-bottom: 0;    
+    }
+    header nav ul {
+        margin: 2%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header nav {
+        position: static;
+        width: auto;
+        margin: 2% 5% 0;
+    }
+    
+    /* Services Page */
+ section.thirds article {
+        background: #E6E6E6;
+        min-height: 150px;
+        width: 95%;
+        margin: 2% 2.5% 0 2.5%;
+        float: left;
+    } 
+    section.whole article h2, section.thirds article h2 {
+/*        margin: 5%;*/
+        font-size: 1.2em;
+        text-align: left;
+    }   
+    /* End of Services */
+        
+    h1 img {
+        min-width: 350px;
+    }
+    
+    header nav ul {
+        width: 100%;
+    
+    }
+    header nav ul li {
+        width: 100%;
+        text-align: left;
+        margin-bottom: .3%;
+        margin-top: .3%;
+    }
+    
+    header nav ul li a {
+        display: block;
+        width: 100%;
+        padding-left: 6%;
+    }
+}
+
+#quote {
+    width: auto;
+    line-height: 1.5em;
+    padding: 1em;
+}
+
+footer {
+    background: transparent;
+    min-height: 100px;
+    color: #FFF;
+    margin: 1% 2.5%;
+    text-align: center;
+}
+
+footer ul {
+    padding: 2%;
+    margin: 0;
+    text-align: center;
+}
+
+footer li {
+    list-style: none;
+    line-height: 2em;
+}
+
+section.half article {
+    background: transparent;
+    padding: 0;
+}
