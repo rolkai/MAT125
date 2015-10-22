@@ -105,12 +105,21 @@ nav ul#navlist li a:hover {
 }
 
 /*--- NOSCRIPT STYLES ---*/
+#mainnav {
+    padding-top: 4em;
+}
 #mainnav li {
     width: 100%;
     text-align: center;
     height: 2.5em;
     line-height: 2.5em;
     border-top: 1px #ccc solid;
+}
+
+noscript p {
+    text-align: center;
+    margin: 1em auto;
+    width: 80%;
 }
 
 /*---SECTION RULES---*/
@@ -157,18 +166,27 @@ section.page-content div {
     padding-top: 4em; /* ensures h1s clear the persistent navbar at top */
 }
 
-section.page-content article h3{
-    font-weight: 700;\
-    font-size: 1.15em;
-}
-section#page-content article 
-
 section.page-content article {
     margin-top: 1em;
     background: url(images/break.png) no-repeat top center;
     padding-top: 30px;
-    background-size: 60% 10%;
+    background-size: 60% 10px;
 }
+setion.page-content article h3 {
+    font-weight: 700;
+    font-size: 1.15.em;
+}
+section.page-content article dl {
+    margin: 1.5em auto;
+    margin-left: 0.5em;
+}
+section.page-content article dt {
+    font-weight: 700;
+}
+section.page-content article dd {
+    margin-bottom: 0.6em;
+}
+
 /*special PROFILE rules */
 section.page-content div {
     margin-top: 0;
@@ -176,7 +194,7 @@ section.page-content div {
 
 /* special SKILLS rules */
 section#skills ul {
-    width: 30%;
+    width: 60%;
     margin: 1em auto;
     padding: 1em auto;
     overflow: hidden;
@@ -209,6 +227,7 @@ section#portfolio h3 {
 }
 section#portfolio h3:hover{
     background: #E5E3E3;
+/*    padding-top: 20%;*/
 }
 section#portfolio ul {
     width: 100%;
@@ -258,4 +277,25 @@ section#contact ul li a img {
     width: 60%;
     max-width: 80px;
     margin: auto;
+}
+
+/* ------- MEDIA QUERIES -------- */
+@media screen and (min-width:720px) {
+    section#skills ul {
+        width: 100%;
+    }
+    section#skills ul li {
+        width: 16%;
+        padding: 0.33%;
+    }
+    section#skills ul li:nth-child(2n+1) {
+    clear: none;
+    }
+    section#portfolio li {
+        float: left;
+        width: 29%;
+        max-width: 29%;
+        margin: 1em 1%;
+        padding: 1%;
+    }
 }

@@ -18,7 +18,7 @@
             <li><a href="#skills">skills</a></li>
             <li><a href="#education">education</a></li>
             <li><a href="#experience">experience</a></li>
-            <li><a href="#porfolio">portfolio</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
     </nav>
@@ -118,7 +118,7 @@
 </section>
 
    <!--PORTFOLIO SECTION-->
-<section id='portfolio' class="page-content">
+<section id="portfolio" class="page-content">
     <div>
         <header>
             <h1>Portfolio</h1>
@@ -128,25 +128,35 @@
             <h3>Web Development</h3>
             <ul>
                 <li>
-                    <a href="portfolio/placeholder.jpg">
-                        <img src="portfolio/thumb_placeholder.jpg" alt="Placeholder">
+                    <a href="portfolio/placeholder.gif">
+                        <img src="portfolio/placeholder.gif" alt="Placeholder">
                     </a>
                 </li>
                 <li>
-                    <a href="portfolio/placeholder.jpg">
-                        <img src="portfolio/thumb_placeholder.jpg" alt="Placeholder">
+                   <a href="portfolio/placeholder.gif">
+                        <img src="portfolio/placeholder.gif" alt="Placeholder">
                     </a>
                 </li>    
                 <li>
-                    <a href="portfolio/placeholder.jpg">
-                        <img src="portfolio/thumb_placeholder.jpg" alt="Placeholder">
+                    <a href="portfolio/placeholder.gif">
+                        <img src="portfolio/placeholder.gif" alt="Placeholder">
                     </a>
             </li>    
             <li>
-                    <a href="portfolio/placeholder.jpg">
-                        <img src="portfolio/thumb_placeholder.jpg" alt="Placeholder">
+                  <a href="portfolio/placeholder.gif">
+                        <img src="portfolio/placeholder.gif" alt="Placeholder">
                     </a>
             </li>
+             <li>
+                  <a href="portfolio/placeholder.gif">
+                        <img src="portfolio/placeholder.gif" alt="Placeholder">
+                    </a>
+            </li>
+             <li>
+                  <a href="portfolio/placeholder.gif">
+                        <img src="portfolio/placeholder.gif" alt="Placeholder">
+                    </a>
+            </li>    
             </ul>
         </article>
     </div>
@@ -204,6 +214,26 @@
             <li><a href="#contact">contact</a></li>
         </ul>
     </noscript>
-
+    
+    <script type="text/javascript">
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 800);
+            return false;
+          }
+        }
+      });
+    });
+</script>
+<noscript>
+    <p>Javascript is disabled in your browser.  Smoooth scrolling will be disabled on navigation links, but it does not affect content.</p>
+</noscript>
+    
 </body>
 </html>
