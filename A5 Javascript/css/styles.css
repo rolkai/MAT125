@@ -1,0 +1,380 @@
+@font-face {
+    font-family: 'nexa_rust_slabblack';
+    src: url('NexaRustSlab-BlackShadow01-Free-webfont.eot');
+    src: url('NexaRustSlab-BlackShadow01-Free-webfont.eot?#iefix') format('embedded-opentype'),
+         url('NexaRustSlab-BlackShadow01-Free-webfont.woff2') format('woff2'),
+         url('NexaRustSlab-BlackShadow01-Free-webfont.woff') format('woff'),
+         url('NexaRustSlab-BlackShadow01-Free-webfont.ttf') format('truetype'),
+         url('NexaRustSlab-BlackShadow01-Free-webfont.svg#nexa_rust_slabblack_shadow_01') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    font-size: 100%;
+    font: 1.15em/1.3 'Neuton','Helvetica', arial, sans-serif;
+    font-weight: 300;    
+    }
+/*---GENERAL TEXT RULES---*/
+h1 {
+    font:2.5em/1 'nexa_rust_slabblack','Helvetica', arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;    
+}
+h2 {
+    font: 1.25em/1 'nexa_rust_slabblack','Helvetica', arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #009ee6;
+}
+
+a:hover {
+    color: #E57A00;
+}
+
+/*---NAV RULES---*/
+nav {
+    height: 3em;
+    line-height: 2.3em;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 600;
+    display: inline-block;
+    width: 100%;
+    background: rgba(0,0,0,0.55);
+    border: 0;
+    font-family:'Neuton','Helvetica', arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    /* Next line prevents links from jumping to wrong place in Chrome and Safari */
+    -webkit-transform: translateZ(0);
+}
+
+nav.nav_closed{
+    overflow: hidden;
+}
+
+/*---MENU button rules---*/
+a#menu{
+    float: right;
+    border: 1px solid #ccc;
+    color: #FFC758;
+    width: 4em;
+    margin-top: 5px;
+    margin-right: 15px;
+    font-weight: 300;
+    margin-bottom: 6px;
+    text-decoration: none;
+}
+a#menu:hover {
+    background: rgba(255,255,255,0.4);
+    color: #333;
+    font-weight: 600;
+}
+
+/* #navlist */
+ul#navlist {
+    clear: right;
+    list-style: none;
+    font-weight: 300;
+}
+
+nav.nav_closed ul#navlist {
+    display: none;
+}
+nav.nav_open {
+    overflow: visible;
+    background: rgba(0,0,0,0.85);
+}
+nav.nav_open ul#navlist {
+    display: block;
+    background: rgba(0,0,0,0.85);
+}
+
+nav.nav_open a#menu {
+    color: #FFb219;
+    background: #999;
+}
+nav ul#navlist li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-top: 1px #ccc solid;
+    color: #FFb219;
+    text-decoration: none;
+}
+nav ul#navlist li a:hover {
+    background: #009ee6;
+    color:#fff;
+    text-decoration: none;
+}
+
+/*--- NOSCRIPT STYLES ---*/
+#mainnav {
+    padding-top: 4em;
+}
+#mainnav li {
+    width: 100%;
+    text-align: center;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-top: 1px #ccc solid;
+}
+
+noscript p {
+    text-align: center;
+    margin: 1em auto;
+    width: 80%;
+}
+
+/*---SECTION RULES---*/
+section {
+}
+
+/*---Section#page-header rules---*/
+section#page-header {
+    height: 100vh; /*vh is "viewport height */
+    width: 100%;
+    background: #ccc url(../images/plane.jpg) no-repeat left center;
+    background-size: cover;
+    color: #000;
+    display: table; /*IMPORTANT: sets parent container to behave like a table*/
+}
+
+section#page-header header {
+    width: 100%;
+    text-align: center;
+    display: table-cell; /*IMPORTANT: sets child to display like table cell for vertical centering */
+    vertical-align: middle; /*IMPORTANT: vertically centers text in "table cell" regardless of parent resizing. */
+}
+
+section#page-header header h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 3em;
+    margin-left: 30%;
+    text-shadow: 1px 1px #555151;
+}
+section#page-header header {
+    text-align: right;
+    position: absolute;
+    top:10%;
+}
+
+section#page-header header h2 {
+    font-size: 1em;
+    text-transform: none;
+    text-shadow: 1px 1px #555151;
+    font-weight: 300;
+    text-align: right;
+    margin-right: 5%;
+}
+
+/* section.page-content */
+section.page-content {
+    clear: both;
+}
+section.page-content div {
+    width: 85%;
+    max-width: 1024px;
+    margin: 3em auto;
+    padding-top: 4em; /* ensures h1s clear the persistent navbar at top */
+}
+
+section.page-content article {
+    margin-top: 1em;
+    background: url(images/break.png) no-repeat top center;
+    padding-top: 30px;
+    background-size: 60% 10px;
+}
+setion.page-content article h3 {
+    font-weight: 700;
+    font-size: 1.15em;
+}
+section.page-content article dl {
+    margin: 1.5em auto;
+    margin-left: 0.5em;
+}
+section.page-content article dt {
+    font-weight: 700;
+}
+section.page-content article dd {
+    margin-bottom: 0.6em;
+}
+
+/*special PROFILE rules */
+section.page-content div {
+    margin-top: 0;
+}
+section#profile {
+    padding-bottom: 2em;
+    background: #ffc758; 
+/*
+    background: #ffc89a url(images/asfalt-dark.png) no-repeat center center;
+    background-size: cover;
+    opacity: 0.7;
+*/
+}
+
+/* special SKILLS rules */
+section#skills {
+    padding-bottom: 2em;
+/*
+    background: #FFc758 url(images/asfalt-dark.png) no-repeat center center;
+    background-size: cover;
+    background-color: #c78e5a;
+*/
+}
+
+section#skills ul {
+    width: 30%;
+    margin: 1em auto;
+    padding: 1em auto;
+    overflow: hidden;
+}
+section#skills ul li {
+    float: left;
+    width: 60%;
+    padding: 5%;
+}
+section#skills ul li:nth-child(2n+1) {
+    clear: both;
+}
+    
+section#skills ul li img {
+    display: block;
+    width: 100%;
+    margin-top: 1em;    
+}
+
+/* special EDUCATION rules */
+section#education {
+    padding-bottom: 2em;
+    background: #6490F3;
+    /*
+    background: url(images/education.png) no-repeat center center;
+    background-size: cover;
+*/
+}
+
+/* special EXPERIENCE rules */
+section#experience {
+    background: 53f1f1;
+/*    background: url(images/aerial.jpg) no-repeat center center;*/
+    padding-bottom: 2em;
+    opacity: 0.7;
+}
+
+/* special PORTFOLIO rules */
+section#portfolio {
+    padding-bottom: 2em;
+    background: #53f1f1;
+}
+section#portfolio h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    text-align: center;
+    height: 2em;
+    line-height: 2em;
+    width: 80%;
+    margin: 0 auto;
+}
+section#portfolio h3:hover{
+    background: #E5E3E3;
+/*    padding-top: 20%;*/
+}
+section#portfolio ul {
+    width: 100%;
+    max-width: 800px;
+    margin: 1em auto;
+    overflow: hidden;
+}
+section#portfolio li {
+    width: 80%;
+    max-width: 200px;
+    margin: 1em auto;
+    padding: 1%;
+    border: 1px solid #ccc;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+section#portfolio li:hover {
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+section#portfolio li a img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* special CONTACT rules */
+section#contact {
+    text-align: center;
+/*    background: #FFc89a;*/
+/*    background: #fcead9;*/
+    border-bottom: 4em #232323 solid;
+}
+section#contact ul {
+    width: 75%;
+    margin: 1em auto;
+    padding: 1em auto;
+    overflow: hidden;
+}
+section#contact ul li {
+    float: left;
+    width: 20%;
+}
+section#contact ul li a img {
+    display: block;
+    width: 60%;
+    max-width: 80px;
+    margin: auto;
+}
+
+/* ------- MEDIA QUERIES -------- */
+@media screen and (min-width:720px) {
+    section#page-header header h1{
+        width: 100%;
+        font-size: 6em;
+        font-weight: 400;
+        line-height: 3em;
+        margin-left: 20%;
+        text-shadow: 1px 1px #555151;        
+    }
+    section#page-header header h2 {
+        font-size: 3em;
+        text-transform: none;
+        text-shadow: 1px 1px #555151;
+        font-weight: 300;
+        margin-right: 5%;
+}
+    
+    section#skills ul {
+        width: 100%;   
+    }
+    section#skills ul li {
+        width: 24.1%;
+        padding: 0.33%;
+    }
+    section#skills ul li:nth-child(2n+1) {
+    clear: none;
+    }
+    section#portfolio li {
+        float: left;
+        width: 29%;
+        max-width: 29%;
+        margin: 1em 1%;
+        padding: 1%;
+    }
+}
